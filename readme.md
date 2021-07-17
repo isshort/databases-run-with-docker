@@ -1,5 +1,5 @@
-#Mysql
- first go to mysql directory 
+# Mysql
+first go to mysql directory 
         
         cd mysql
 
@@ -8,7 +8,8 @@ and then.
     $ docker-compose build 
     $ docker-compose up
     
-#Note if port is already used in your computer change port number in docker-compose.yml file 
+### Note 
+if port is already used in your computer change port number in docker-compose.yml file 
 
 check mysql with adminer 
 
@@ -21,7 +22,7 @@ Connection with Adminer and MySQL
     “Username” : type “root” ;
     “Password” : type “12345678” ;
     “Database” : type “mydb” ;
-#Note
+### Note
     these credentials we have set in docker-compose.yml file you can change it 
 Run mysql with phpmyadmin 
 
@@ -31,8 +32,8 @@ Run mysql with phpmyadmin
     username: root
     password: 12345678
 
-#Notethese credentials we have set in docker-compose.yml file you can change it 
-#Postgres
+### Notethese credentials we have set in docker-compose.yml file you can change it 
+# Postgres
     go to postgresql directory 
 
     and then.
@@ -40,7 +41,7 @@ Run mysql with phpmyadmin
     $ docker-compose build 
     $ docker-compose up
 
-#Note if port is already used in your computer change port number in docker-compose.yml file 
+### Note if port is already used in your computer change port number in docker-compose.yml file 
 
     check postgresql with pgadmin 
 
@@ -49,7 +50,7 @@ Run mysql with phpmyadmin
     login:  admin@admin.com
     password: 12345678
 
-#Note
+### Note
     these credentials we have set in docker-compose.yml file you can change it 
 
 
