@@ -1,0 +1,19 @@
+CREATE TABLE foo (fooid int,foosubid int, fooname text);
+INSERT INTO foo values(1,21,'Test1');
+INSERT INTO foo values(2,22,'Test2');
+INSERT INTO foo values(3,23,'Test3');
+
+CREATE FUNCTION getfoo(int) RETURNS SETOF foo as $$
+SELECT * FROM foo WHERE fooid = $1;
+$$ LANGUAGE SQL;
+
+SELECT * FROM getfoo(1) as t1;
+
+SELECT * from foo where foosubid IN (
+ select foosubid from getfoo(foo.fooid) z 
+	WHERE z.fooid = foo.fooid
+);
+
+CREATE VIEW vw_getfoo as SELECT * FROM getfoo(1);
+select * FROM vw_getfoo;
+
