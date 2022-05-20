@@ -48,7 +48,7 @@ Run mysql with phpmyadmin
     http://localhost:5050
 
     login:  admin@admin.com
-    password: 12345678
+    password: admin
 
 ### Note
     these credentials we have set in docker-compose.yml file you can change it 
